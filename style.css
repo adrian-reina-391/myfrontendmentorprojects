@@ -1,0 +1,62 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(212, 45%, 89%);
+    font-family: 'Rubik', sans-serif;
+}
+
+.all{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+
+
+.completed{
+    width: 300px;
+    height: 500px;
+    background-color: rgba(192, 181, 202, 0.616);
+    border-radius: 0.9em;
+    box-shadow: 1px 1px #424141;
+}
+
+
+.preview{
+    width: 94%;
+    margin: 0.9em 3% 0.5em 3%;
+    border-radius: 0.9em;
+    padding: 0.5em;
+}
+
+.link_challenge{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+    text-decoration: none;
+    text-align: center;
+    color: aliceblue;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    background-color: rgb(14, 171, 233);
+
+}
+
+.link_challenge:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
