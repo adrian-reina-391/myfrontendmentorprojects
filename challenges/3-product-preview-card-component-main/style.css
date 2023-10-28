@@ -54,6 +54,7 @@ section{
     width: 94%;
     margin-top: 0; /* Changed to 0 to ensure it is flush with the top of the container element */
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
     
 }
 
