@@ -29,6 +29,7 @@
     padding-bottom: 1rem;
     border-radius: 0.9rem;
     clip-path: inset(0% 0% 0% 0%);
+    position: relative;
 }
 
 .view{
