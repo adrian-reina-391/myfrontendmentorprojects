@@ -1,0 +1,143 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card{
+    background-color: hsl(216, 50%, 16%);
+    max-width: 500px;
+    width: 15%;
+    min-width: 305px;
+    margin:  auto;
+    padding: 0.5em;
+    border-radius: 0.9rem;
+    font-size:  18px;
+}
+
+.img-container{
+    width: 94%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.9rem;
+}
+
+.image{
+    width: 100%;
+    border-radius: 0.9rem;
+}
+
+main{
+    width: 94%;
+    line-height: 1.5rem;
+}
+
+.title{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+}
+
+.text{
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    margin: 0.8rem 0;
+    font-size: 16px;
+}
+
+.bottom{
+    width: 94%;
+    display: inline-block;
+    margin: 0 3%;
+    
+    display: flex;
+    flex-direction: row;
+
+    
+}
+
+.coin{
+    width: 48%;
+    display: inline-block;
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.eth-icon{
+    float: left;
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+.clock-icon{
+    margin-right: 0.5rem;
+    
+}
+
+.left-time{
+    width: 48%;
+    display: inline-block;
+    font-size: 0.9rem;
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+footer{
+    width: 94%;
+    margin: 1rem 0 0 0;
+    border-top: solid 1px hsl(215, 32%, 27%);
+    margin-left: 0.5rem;
+    padding: 1rem 0;
+    vertical-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.creation{
+    color: hsl(215, 51%, 70%);
+    font-size: 16px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.author{
+    margin-left: 0;
+}
+
+.avatar{
+    width: 2rem;
+    border-radius: 50%;
+    border: solid 1px white;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+
+    
+}
+
+
+
+.attribution{
+    width: 94%;
+    padding: 0.2rem;
+}
+
+.creation, .author {
+    display: inline-block;
+}
