@@ -32,24 +32,18 @@
     position: relative;
 }
 
-.view{
-    display: none;
-    width: 100%;
-    background-color: hsl(178, 100%, 50%);
-    opacity: 0.4;
-    border-radius: 0.9rem;
+
+
+.view { 
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    object-fit: contain;
-    align-items: center;
-    justify-content: center;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+    background-color: hsl(178, 100%, 50%);
+    padding: 41.3% ;
+    border-radius: 0.9rem;
+    opacity: 0.4;
 }
 
 .image{
@@ -57,9 +51,12 @@
     border-radius: 0.9rem;
 }
 
+
 .image:hover + .view{
     display: block;
 }
+
+
 
 
 main{
@@ -86,11 +83,8 @@ main{
     width: 94%;
     display: inline-block;
     margin: 0 3%;
-    
     display: flex;
     flex-direction: row;
-
-    
 }
 
 .coin{
