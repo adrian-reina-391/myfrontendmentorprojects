@@ -1,0 +1,271 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.all{
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+
+}
+
+.img-container{
+    width: 100%;
+    margin: 0 auto;
+    border: solid 3px pink;
+}
+
+.image{
+    width: 98%;
+    /* border: solid 3px pink; */
+    border: solid 3px #42A2E0;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+    color: #42A2E0;
+}
+
+.location{
+    /* display: none; */
+}
+
+.gps, .address{
+    display: inline-block;
+    margin: 0.3rem;
+}
+
+.email, .amail {
+    display: inline-block;
+    margin: 0.3rem;
+}
+.gps, .email{
+    color: #42A2E0;
+}
+
+.location, .mail{
+    margin: 0.7rem 0;
+}
+
+header{
+    border-bottom: 5px solid #42A2E0 ;
+    margin-bottom: 1.2rem;
+}
+
+/*Here starts the abilities section */
+
+h2{
+    line-height: 2.6rem;
+    border-bottom: solid 2px #42A2E0;
+}
+
+h3{
+    line-height: 1.4rem;
+    margin-bottom: 0.4rem;
+    margin-top: 0.2rem;
+}
+
+.date{
+    color: #42A2E0;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+
+.table{
+    margin: 2rem 0;
+    max-width: 340px;
+}
+
+td{
+    line-height: 2.4rem;
+}
+
+.bar{
+    width: 100%;
+    height: 8px;
+    background-color: rgba(180, 166, 166, 0.774);
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.full-bar{
+    background-color: #42A2E0;
+    height: 100%;
+    margin-left: 0;
+}
+
+.os{
+    width: 100%;
+}
+
+.frontend{
+    width: 20%;
+}
+
+.office{
+    width:80% ;
+}
+
+.networking{
+    width: 60%;
+}
+
+.solving{
+    width: 100%;
+}
+
+.customer{
+    width: 100%;
+}
+
+.teamwork{
+    width: 100%;
+}
+
+.english{
+    width: 70%;
+}
+
+.languages{
+    padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 950px) {
+    *{
+        margin: 0 a;
+        box-sizing: border-box;
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    .all{
+        width: 100%;
+        padding: 3rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        grid-template-rows:  300px 1fr 2fr 0.5fr;
+        grid-auto-rows: min-content;
+    }
+    
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-bottom: 2rem;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 100%;
+        display: grid;
+        grid-template-columns:  320px 1fr;
+        grid-template-rows:  1fr;
+        height: 280px;
+        padding: 0;
+
+    }
+    .img-container{
+        width: 320px;
+        max-width: 320px;
+        margin: 0  0 0 0;
+        /* margin-right: 4rem; */
+        border: solid 3px rgb(36, 35, 35);
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 250px;
+        align-self: flex-start;
+}
+
+    .image{
+        width: 98%;
+        /* border: solid 3px pink; */
+        border: solid 3px #42A2E0;
+        max-width: 320px;
+        
+    }
+    .top-text{
+        width: 100%;
+        min-width: 500px;
+        max-height: 250px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .top-text{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  120px 1fr 1fr;
+        max-height: 250px;
+        font-size: 120%;
+    }
+
+    h1{
+        text-align: left;
+        font-size: 3rem;
+        margin: 1.5rem 0 0 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    h2{
+        padding: 1rem 0;
+    }
+
+    h3{
+        padding: 1rem 0;
+    }
+
+    section{
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        /* font-size: 120%; */
+    }
+    .location{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 20px;
+        margin: 0;
+    }
+
+    .mail{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        height: 20px;
+        margin: 0;
+    }
+    
+    section{
+        grid-auto-columns: min-content;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .abilities{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        
+    }
+
+    .history{
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .education{
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        margin: 0;
+    }
+
+    aside{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        margin-left: 2rem;
+    }
+}
