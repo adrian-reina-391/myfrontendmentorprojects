@@ -25,6 +25,7 @@ h1{
 
 
 
+
 .completed{
     width: 300px;
     height: 500px;
@@ -66,4 +67,36 @@ h1{
 .link_challenge:hover{
     transform: scale(1.05);
     transition: .3s;
+}
+
+
+@media screen and (min-width: 800px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5rem; /* Espacio entre las celdas */
+
+    }
+    
+}
+
+
+@media screen and (min-width: 1400px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5rem; /* Espacio entre las celdas */
+
+    }
+    
+}
+
+@media screen and (min-width: 2100px) {
+    .cards-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5rem; /* Espacio entre las celdas */
+
+    }
+    
 }
