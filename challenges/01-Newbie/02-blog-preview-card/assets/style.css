@@ -37,8 +37,17 @@
     padding: 1.2em;
     border-radius: 1.4rem;
     border: #111111 1px solid;
-    box-shadow: #111111  8px 10px;
+    box-shadow: #111111  5px 7px;
 
+}
+
+.card:hover{
+    box-shadow: #111111  8px 10px;
+    
+}
+
+.card:hover .title {
+    color: #F4D04E ;
 }
 
 .image-container{
