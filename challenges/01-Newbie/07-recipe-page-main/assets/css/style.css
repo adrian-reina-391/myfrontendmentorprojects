@@ -12,10 +12,6 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400,500,600,700&family=Young+Serif&display=swap');
-
-
-
 *{
     box-sizing: border-box;
     margin: 0 auto;
@@ -51,7 +47,7 @@ img{
 .content{
     width: 100%;
     max-width: 375px;
-    padding: 2rem;
+    padding: 2.25rem;
     background-color: var(--backgroundcard);
     line-height: 1.5rem;
 }
@@ -61,27 +57,43 @@ img{
     font-family: 'Outfit', sans-serif;
     font-size: 2rem;
     font-weight: 700;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
 }
 
 .subtitle-card{
     background-color:  var(--subtitleareaback);
     line-height: 2.5rem;
-    border-radius: 0.8px;
-    padding: 1rem;
+    border-radius: 0.4rem;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-
+p{
+    font-size: .97rem;
+    font-family: 'Outfit', sans-serif;
+}
 .subtitle{
     color: var(--subttitlecolor);
     font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 0.02rem;
+    font-family: 'Outfit', sans-serif;
 }
 
-b{
-    margin-left: 1rem;
+li{
+    line-height: 2rem;
 }
-    
+
+
+  
+.titles{
+    font-family: 'Young Serif', serif;
+    color: var(--titlescolor);
+    font-weight: 600;
+    font-size: 2rem;
+}
 
 
 .attribution{
