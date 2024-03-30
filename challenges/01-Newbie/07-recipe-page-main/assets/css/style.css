@@ -82,12 +82,16 @@ p{
     font-family: 'Outfit', sans-serif;
 }
 
+ul {
+    list-style-type: none;
+}
+
 li{
     line-height: 2rem;
 }
 
 
-  
+ 
 .titles{
     font-family: 'Young Serif', serif;
     color: var(--titlescolor);
