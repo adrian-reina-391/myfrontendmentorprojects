@@ -35,13 +35,15 @@
 .image{
     width: 375px;
     max-width: 375px;
-    height:30px ;
+    background-color: blue;
 }
 
+
 img{
+    display: block;
     width: 100%;
-    max-width: 375px;
     height: 100%;
+    object-fit: cover;
 }
 
 .content{
@@ -50,13 +52,15 @@ img{
     padding: 2.25rem;
     background-color: var(--backgroundcard);
     line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.452);
+    
 }
 
 .title{
     color: var(--maintitle);
-    font-family: 'Outfit', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: serif;
+    font-size: 2.2rem;
+    font-weight: 800;
     line-height: 2.2rem;
     margin-bottom: 1rem;
 }
@@ -67,13 +71,16 @@ img{
     border-radius: 0.4rem;
     padding: 1.2rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: .2rem;
 }
 
 p{
     font-size: .97rem;
     font-family: 'Outfit', sans-serif;
+    font-weight: 500;
 }
+
+
 .subtitle{
     color: var(--subttitlecolor);
     font-size: 1.3rem;
@@ -82,21 +89,109 @@ p{
     font-family: 'Outfit', sans-serif;
 }
 
-ul {
-    list-style-type: none;
+
+.card{
+    line-height: 1.4rem;
+
+}
+.table-area tr{
+    
+    line-height: 1.5rem;
+    padding: 2rem 2rem;
+}
+.table-area  td{
+    margin-right: 1.4rem
 }
 
-li{
-    line-height: 2rem;
+.bullet {
+    display: inline-block;
+    margin:  0 0.8rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 40%;
+    background-color: var(--subttitlecolor);
+    margin-right: 2rem;
 }
 
 
- 
 .titles{
     font-family: 'Young Serif', serif;
     color: var(--titlescolor);
     font-weight: 600;
     font-size: 2rem;
+    margin: 2rem 0 1.5rem  0;
+}
+
+.ingredients{
+    border-bottom: 1px var(--letter) solid;
+    padding-bottom: 2rem;
+}
+.bullet2 {
+    display: inline-block;
+    margin:  0 0.8rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 40%;
+    background-color: var(--titlescolor);
+    margin-right: 2rem;
+    
+}
+
+.table-ing tr{
+    /* background-color: blue; */
+    border-bottom: 1.8rem solid rgba(rgba(143, 67, 67, 0), green, blue, alpha);
+}
+.instructions{
+    border-bottom: 1px var(--letter) solid;
+    padding-bottom: 2rem;
+}
+
+.table-instructions td{
+    margin-left: 2rem;
+}
+
+.number{
+    color: var(--titlescolor);
+    font-weight: 700;
+    padding-right: 1rem;
+    padding-top: 0;
+}
+.nutrition{
+    padding-bottom: 2rem;
+}
+
+.paragraph{
+    color: rgba(0, 0, 0, 0.452);
+    font-weight: 600;
+}
+
+.table-nutrition{
+    margin-top: 1.5rem;
+    width: 100%;
+    border-spacing: 0;
+}
+
+
+.table-nutrition td{
+    border-bottom: 1px solid var(--letter);
+    line-height: 2rem;
+    color: rgba(0, 0, 0, 0.452);
+    font-weight: 600;
+    border-collapse: collapse;
+    padding: 0.5rem 0;
+    
+    padding-left: 2.2rem;
+}
+
+.table-nutrition td:nth-child(2) {
+    
+    color: var(--titlescolor); 
+    text-align: left;
+    
+  }
+  
+  .table-nutrition td:nth-child(1) {
+    width: 40%;
 }
 
 
@@ -104,7 +199,7 @@ li{
     margin:1rem auto;
     margin-bottom: 0.5rem;
     width: 320px;
-    color: white;
+    color: black;
 }
 
 
