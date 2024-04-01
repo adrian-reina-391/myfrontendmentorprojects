@@ -31,9 +31,9 @@
 }
 
 .image{
-    width: 375px;
-    max-width: 375px;
-    background-color: blue;
+    min-width: 375px;
+    max-width: 750px;
+    
 }
 
 
@@ -46,7 +46,8 @@ img{
 
 .content{
     width: 100%;
-    max-width: 375px;
+    min-width: 375px;
+    max-width: 750px;
     padding: 2.25rem;
     background-color: var(--backgroundcard);
     line-height: 1.5rem;
@@ -90,26 +91,9 @@ p{
 
 .card{
     line-height: 1.4rem;
+  }
 
-}
-.table-area tr{
-    
-    line-height: 1.5rem;
-    padding: 2rem 2rem;
-}
-.table-area  td{
-    margin-right: 1.4rem
-}
 
-.bullet {
-    display: inline-block;
-    margin:  0 0.8rem;
-    width: 5px;
-    height: 5px;
-    border-radius: 40%;
-    background-color: var(--subttitlecolor);
-    margin-right: 2rem;
-}
 
 
 .titles{
@@ -120,40 +104,55 @@ p{
     margin: 2rem 0 1.5rem  0;
 }
 
+/* .card-area li {
+    margin-left: -.5rem;
+} */
+
+li::marker {
+    color: hsl(332, 51%, 32%);
+    font-weight: 800;
+  }
 .ingredients{
     border-bottom: 1px var(--letter) solid;
     padding-bottom: 2rem;
 }
-.bullet2 {
-    display: inline-block;
-    margin:  0 0.8rem;
-    width: 5px;
-    height: 5px;
-    border-radius: 40%;
-    background-color: var(--titlescolor);
-    margin-right: 2rem;
-    
+
+.list-ing li{
+    margin-left: -.5rem;
 }
 
-.table-ing tr{
-    /* background-color: blue; */
-    border-bottom: 1.8rem solid rgba(rgba(143, 67, 67, 0), green, blue, alpha);
+.list-ing  p{
+    margin-left: 1rem;
 }
+
 .instructions{
     border-bottom: 1px var(--letter) solid;
     padding-bottom: 2rem;
 }
 
-.table-instructions td{
-    margin-left: 2rem;
+
+
+.list-instructions li{
+
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: -1rem;
+    text-align: start;
+  }
+
+.list-instructions li::marker {
+    margin-right: 2rem;
 }
 
-.number{
-    color: var(--titlescolor);
-    font-weight: 700;
-    padding-right: 1rem;
-    padding-top: 0;
+.list-instructions p{
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: start;
 }
+    
+
+
 .nutrition{
     padding-bottom: 2rem;
 }
@@ -201,3 +200,64 @@ p{
 }
 
 
+@media (min-width: 768px) {
+    .all{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+    
+    }
+    
+
+     .card{
+        margin-top: 6rem;
+        width: 60;
+        border-radius: 20px;
+        width: 84%;
+        max-width: 920px;
+     }
+
+     .image{
+        width: 100%;
+        max-width: 920px;
+        background-color: white;
+        padding: 2.25rem;
+        border-radius: 1.6rem 1.6rem 0 0;
+    }
+
+    img{
+        border-radius: 1rem;
+        object-fit: none;
+    }
+
+    
+    .content{
+        width: 100%;
+        max-width: 920px;
+        padding: 2.25rem;
+        background-color: var(--backgroundcard);
+        line-height: 1.5rem;
+        color: rgba(0, 0, 0, 0.452);
+        border-radius: 0 0 20px 20px;
+        font-size: calc(24px * 2);
+        
+    }
+
+    .title{
+        margin-bottom: 2rem;
+    }
+    
+   
+    
+    
+    
+    
+      
+    
+    }
+
+
+
+}
