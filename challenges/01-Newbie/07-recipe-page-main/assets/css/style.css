@@ -91,7 +91,7 @@ p{
 
 .card{
     line-height: 1.4rem;
-  }
+}
 
 
 
@@ -111,7 +111,7 @@ p{
 li::marker {
     color: hsl(332, 51%, 32%);
     font-weight: 800;
-  }
+}
 .ingredients{
     border-bottom: 1px var(--letter) solid;
     padding-bottom: 2rem;
@@ -138,7 +138,7 @@ li::marker {
     margin-bottom: 10px;
     margin-left: -1rem;
     text-align: start;
-  }
+}
 
 .list-instructions li::marker {
     margin-right: 2rem;
@@ -259,5 +259,3 @@ li::marker {
     }
 
 
-
-}
