@@ -1,0 +1,128 @@
+* {
+    margin:0 auto;
+    box-sizing: border-box; 
+}
+
+:root{
+    --section3color: hsl(0, 78%, 62%);
+    --section2color: hsl(180, 62%, 55%);
+    --section4color: hsl(34, 97%, 64%);
+    --section5color: hsl(212, 86%, 64%);
+    --titles-color: hsl(234, 12%, 34%);
+    --letter-color: hsl(229, 6%, 66%);
+    --background-color: hsl(0, 0%, 98%);
+}
+
+body {
+    font-size: 15px;
+
+        .poppins-extralight {
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+      }
+      
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+      
+}
+
+.all{
+    padding: 2rem;
+}
+main{
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 4rem 0 4rem 0;
+        text-align: center;
+}
+
+p {
+    color: var(--letter-color);
+    line-height: 1.8;
+    font-family: "Poppins", sans-serif;
+}
+
+.light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--titles-color);
+    margin: 1rem 0 0.6rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+}
+
+.bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--titles-color);
+    margin: 0.6rem 0 1.3rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+section {
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0px 10px 10px rgb(163, 165, 174, 0.5);
+    border-radius: 0.5rem;
+
+}
+
+.title {
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--titles-color);
+    font-size: 1.3rem;
+    margin: -.5rem 0 0.3rem 0;
+    
+}
+
+.section2 {
+    border-top: 4px  solid var(--section2color);
+}
+
+.section3 {
+    border-top: 4px  solid var(--section3color);
+
+}
+
+.section4 {
+    border-top: 4px  solid var(--section4color);
+
+}
+
+.section5 {
+    border-top: 4px  solid var(--section5color);
+
+}
+
+.p-card {
+    margin-bottom: 1.8rem;
+    font-size: 0.8rem;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    margin-right: .1rem;
+}
