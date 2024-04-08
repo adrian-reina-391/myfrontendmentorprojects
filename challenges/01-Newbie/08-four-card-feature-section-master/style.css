@@ -137,6 +137,14 @@ img {
         margin-bottom: 2rem;
     }
 
+    .light {
+        font-size: 2rem;
+    }
+
+    .bold {
+        font-size: 2rem;
+    } 
+
     .section1{
         margin: 0 auto;
         max-width: 32rem;
