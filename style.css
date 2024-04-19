@@ -28,21 +28,23 @@ h1{
 
 
 
-
-.completed{
+.completed {
     width: 300px;
     height: 500px;
     background-color: rgba(192, 181, 202, 0.616);
     border-radius: 0.9em;
-    box-shadow: 1px 1px #424141;
-    margin-top: 2REM;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra inicial */
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    
+    transition: box-shadow 0.5s ease; /* Transición de la propiedad box-shadow */
+    animation: banimate__fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.8s; 
 }
 
-.completed:hover{
-    box-shadow: 5px 8px 3px black;
+.completed:hover {
+    box-shadow: 5px 8px 10px #0593e6b4; /* Nueva sombra al pasar el cursor */
 }
+
 
 .preview{
     width: 94%;
