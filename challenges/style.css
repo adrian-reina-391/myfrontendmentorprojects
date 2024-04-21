@@ -5,7 +5,8 @@
 
 
 body{
-    background-color: hsla(0, 0%, 3%, 0.774);
+    /* background-color: hsla(0, 0%, 3%, 0.774); */
+    background-color: hsla(0, 0%, 3%, 0.877);
     
     font-family: 'Rubik', sans-serif;
 }
