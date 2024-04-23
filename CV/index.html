@@ -17,6 +17,12 @@
 </head>
 <body>
     <div class="all">
+        <!-- botón de modo oscuro -->
+        <label class="switch" >
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+
         <header class="header">
             <div class="img-conatiner">
                 <img src="./assets/images/perfil.png" alt="" class="image">
@@ -25,14 +31,20 @@
                 <div       class="location">
                 <span class="gps"><i class="fa fa-map-marker" aria-hidden="true"></i></span><p class="address">Grand Prairie, 75050,  (TX)</p>
                 </div>
-
-                <div class="mail">
-                <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i></span><p class="amail">adrian.reina.392@gmail.com</p></div>
-            </div> 
-            
                 
+                <div class="mail">
+                <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i></span><p class="amail">adrian.reina.391@outlook.com</p></div>
+            </div> 
         </header>
+
+       
+
         <section class="abilities">
+
+            <!-- Botón de Descarga del CV -->
+            <button id="downloadPdfBtn" style="vertical-align:middle"><span>Download CV</span></button>
+
+
             <h2>Proffessional Sumary</h2>
             <h3>Desktop Support Specialist</h3>
             <div class="summary-list">
@@ -58,7 +70,7 @@
             <h3>Informatic Specialist, Desktop Support Specialist. Ciego de
                 Avila, Cuba
             </h3>
-            <p class="date">Oct. 2017 - March. 2024</p>
+            <p class="date">Oct. 2017 - April. 2024</p>
             <ul>
                 <li>Provide technical support during software installation or
                     configuration</li>
@@ -147,5 +159,7 @@
         </aside>
     </div>
     <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/html2pdf.js-master/dist/html2pdf.js"></script>
+
 </body>
 </html>
