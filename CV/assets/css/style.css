@@ -160,6 +160,8 @@ td{
     padding-bottom: 4rem;
 }
 
+
+
 @media screen and (min-width: 950px) {
     *{
         margin: 0 a;
@@ -292,9 +294,26 @@ td{
         grid-row: 2/4;
         margin-left: 2rem;
     }
+
+    .paragraph {
+        margin-top: 1rem;
+    }
 }
 
+@media screen and (min-width: 1200px) {
+    .all {
+        padding: 6rem;
+        
+    }
 
+    li {
+        line-height: 2;
+    }
+
+    .paragraph {
+        margin-top: 1.5rem;
+    }
+}
 #downloadPdfBtn {
     display: inline-block;
     border-radius: 7px;
@@ -309,6 +328,11 @@ td{
     padding: 1em;
     transition: all 0.4s;
     cursor: pointer;
+    
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    
    }
    
    #downloadPdfBtn span {
@@ -352,7 +376,7 @@ td{
     display: inline-block;
     width: 3.5em;
     height: 2em;
-    position: fixed;
+    position:absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
