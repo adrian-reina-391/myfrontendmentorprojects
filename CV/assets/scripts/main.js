@@ -1,3 +1,4 @@
+/*
 const element = document.body;
 const options = {
     filename: 'Adrian_Reina_CV.pdf',
@@ -20,3 +21,4 @@ const downloadBtn = document.getElementById('downloadPdfBtn');
 downloadBtn.addEventListener('click', function() {
     html2pdf().from(element).set(options).save();
 });
+*/
