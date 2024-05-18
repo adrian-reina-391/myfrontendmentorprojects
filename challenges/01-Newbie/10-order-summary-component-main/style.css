@@ -153,6 +153,7 @@ h1 {
 
 .cancel:hover, .payment:hover, .change:hover {
     opacity: .7;
+    cursor: pointer;
 }
 
 @media (min-width: 1000px) {
