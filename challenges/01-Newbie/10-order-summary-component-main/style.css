@@ -155,10 +155,15 @@ h1 {
     opacity: .7;
 }
 
-@media min-width (1000px) {
+@media (min-width: 1000px) {
     .card {
-        width: 30%;
+        width: 28%;
         min-width: none;
-        max-width: 600px;
+        max-width: 550px;
+    }
+    .price-square {
+        align-self: center;
+
+        
     }
 }
