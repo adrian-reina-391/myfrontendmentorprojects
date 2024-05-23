@@ -1,0 +1,114 @@
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Inter', 'Lexend Deca', Arial, Helvetica, sans-serif;
+    background-color: var(--main-background);
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    max-width: 600px;
+    border-radius: 10px;
+    /* overflow: hidden; Asegura que los bordes redondeados también se apliquen a la imagen y su superposición */
+    margin-bottom: 2rem;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px 10px 0 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(277, 64%, 61%);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+    border-radius: 10px 10px 0 0;
+}
+
+section {
+    padding: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: var(--main-heading);
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.text {
+    color: var(--main-heading);
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: .7;
+}
+
+.details {
+    color: var(--main-heading);
+    text-align: center;
+    font-family: 'Inter';
+    text-transform: uppercase;
+    
+    font-size: 0.8rem;
+}
+
+.companies, .templates, .queries {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    
+}
+
+.description {
+    opacity: .7;
+}
+.numbers   {
+    font-size: 1.5rem;
+    opacity: 1;
+    color: var(--main-heading);
+    font-weight: 700;
+    margin-bottom: .6rem;
+    
+}
