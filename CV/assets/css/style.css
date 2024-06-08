@@ -40,14 +40,14 @@ body{
 .img-container{
     width: 100%;
     margin: 0 auto;
-    /* border: solid 3px pink; */
+    max-height: 250px;
 }
 
 .image{
     width: 98%;
-    /* border: solid 3px pink; */
     border: solid 3px #42A2E0;
-    max-width: 320px;
+    max-width: 229px;
+    max-height: 250px;
     display: flex;
     justify-content: center;
 }
@@ -135,6 +135,10 @@ h3{
 .mailto:hover{
     color: var(--theme-color);
     background-color: var(--primary-color);
+}
+
+.summary-list, .paragraph, .list {
+    line-height: 1.5;
 }
 .table{
     margin: 2rem 0;
