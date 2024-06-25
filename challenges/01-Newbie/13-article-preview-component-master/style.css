@@ -1,0 +1,610 @@
+/* 
+
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+
+*/
+
+:root {
+    /* Light Grayish Blue */
+    --bg-color: hsl(210, 46%, 95%);
+    /* Grayish Blue */
+    --title-color: hsl(217, 19%, 35%);
+    /* Desaturated Dark Blue */
+    --text-color:hsl(214, 17%, 51%);
+    /* Very Dark Grayish Blue */
+    --share-bg: hsl(212, 23%, 69%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.manrope-<uniquifier> {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+#card {
+    background-color: white;
+    width: 84%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 2px 0 3px #20202027;
+}
+
+.share  {
+    display: none;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--title-color);
+}
+
+/* Mobile share view */
+.share {
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    background-color: var(--title-color);
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 0 2rem 1rem 2rem;
+}
+
+.share h2 {
+    margin-right: auto; /* Pushes the H2 to the left */
+    color: var(--text-color);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 4rem;
+    letter-spacing: 5px;
+    font-size: .9rem;
+}
+
+.icons-media {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.icons-media img {
+    margin: 0 0.7rem;
+    cursor: pointer;
+}
+
+.share .icon {
+    background-color: var(--text-color);
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.share .icon img {
+    filter: invert(1);
+    width: 100%; /* Ensure the image scales correctly */
+    height: 100%;
+}
+
+/* Here ends the share section in mobile view */
+
+
+figure {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+.text-area {
+    padding: 2rem;
+}
+
+.title {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: -.5rem 0 0.3rem 0;
+}
+
+.paragraph {
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+footer {
+    height: 4rem;
+}
+
+.author  {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    padding: 0 2rem 1rem 2rem;
+    
+    }
+    
+    .avatar { grid-area: 1 / 1 / 3 / 2; }
+
+    .person { grid-area: 1 / 2 / 2 / 3; }
+    .date { grid-area: 2 / 2 / 3 / 3; }
+    .icon { grid-area: 1 / 3 / 3 / 4; }
+
+.icon {
+    background-color: var(--bg-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    z-index: 1;
+}
+
+.avatar {
+    width: 50px;    
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .8rem;
+    
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.date {
+    width: 100%;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 374px) {
+    .avatar {
+        width: 40px;    
+        height: 40px;
+    }
+
+    .person {
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+    .date {
+        font-size: 0.6rem;
+        margin-top: 0.4rem;
+    }
+
+    .share {
+        z-index: 2;
+        width: 100%;
+        margin: 0;
+        background-color: var(--title-color);
+        display: flex;
+        align-items: center; /* Center content vertically */
+        /* padding: 0 2rem 1rem 2rem; */
+    }
+    
+    .share h2 {
+        margin-right: auto; /* Pushes the H2 to the left */
+        color: var(--text-color);
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 4rem;
+        letter-spacing: 3px;
+        font-size: .9rem;
+    }
+    
+    .icons-media {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: .5rem;
+    }
+    
+    .icons-media img {
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+    
+    
+}
+
+@media screen and (min-width: 394px) and (max-width: 767px) {
+    /* Aquí comienza la sección de compartir en vista móvil */
+
+    footer {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        
+    }
+
+    .share {
+        z-index: 2;
+        width: 100%;
+        margin: 0;
+        background-color: var(--title-color);
+        display: flex;
+        align-items: center; /* Centrar contenido verticalmente */
+        /* padding: 0 2rem 1rem 2rem; */
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .share h2 {
+        margin-right: auto; /* Empuja el H2 hacia la izquierda */
+        color: var(--text-color);
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 4rem;
+        letter-spacing: 3px;
+        font-size: .9rem;
+        padding-left: 50px;
+    }
+
+    .icons-media {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: .5rem;
+    }
+
+    .icons-media img {
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
+/* Asegurarse de mantener los estilos de los elementos */
+.avatar,
+.avatar img,
+.icon {
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        font-family: 'Manrope', sans-serif;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100dvh;
+        background-color: var(--bg-color);
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;  
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    #card {
+        background-color: white;
+        width: 84%;
+        
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        grid-template-rows: auto 1fr auto;
+        max-width: 800px;
+        box-shadow: 2px 0 3px #20202027;
+    }
+            
+    figure { 
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+        height: auto;
+        object-fit: cover;
+        overflow-x: hidden;
+        object-position: left;
+    }
+
+    figure img {
+        height: 100%;
+    }
+
+    .text-area {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding: 2rem;
+    }
+
+    .title { 
+        color: var(--title-color);
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin: 0 0 1rem 0;
+    }
+
+    .paragraph {
+        color: var(--text-color);
+        font-weight: 500;
+        line-height: 1.8;
+        margin: 1.5rem 0;
+    }
+
+    footer { 
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+
+    .avatar {
+        width: 40px;    
+        height: 40px;
+    }
+
+    .person {
+        font-size: 1.2rem;
+        line-height: 1;
+        margin-bottom: 0.3rem;
+    }
+
+    .date {
+        font-size: 0.8rem;
+        margin-top: 0rem;
+        opacity: .6;
+    }
+
+    .icon {
+        margin-left: auto;
+    }
+
+    .author {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* working on the share floating class "tolltip" */
+    
+    .author {
+        display: grid;
+    }
+
+    .share {
+        /* to change to flex when btn share clicked */
+        display: none;
+        position: absolute;
+        /* top: -2rem;
+        left: 50%; */
+        transform: translate(130%, -90px);
+        padding: 1rem;
+        background-color: var(--title-color);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-direction: row; 
+        width: 16rem;
+        height: 4rem;
+    }
+    .share::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--title-color) transparent transparent transparent;
+    }
+
+    .icon#shareButtonTooltip {
+        
+        display: block;
+        position: absolute;
+        top: 84px;
+        left: 110px;
+        background-color: var(--title-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        z-index: 2;
+    }
+
+    .icons-media {
+        padding: 0;
+    }
+
+    .share h2 {
+        margin:0;
+        padding-left: 0.8rem;
+    }
+}
+
+
+@media screen and (min-width: 968px) {
+    #card {
+        height: 38%;
+    }
+    
+    footer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .author {
+        margin-left: 0 ;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .icon {
+        margin-left: auto;
+    }
+
+    
+    /* working on the share floating class "tolltip" */
+    
+    .author {
+        display: grid;
+    }
+
+    .share {
+        /* to change to flex when the share btn clicked */
+        display: none;
+        position: absolute;
+        /* top: -2rem;
+        left: 50%; */
+        transform: translate(134%, -90px);
+        padding: 1rem;
+        background-color: var(--title-color);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-direction: row; 
+        width: 16rem;
+        height: 4rem;
+    }
+    .share::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--title-color) transparent transparent transparent;
+    }
+
+    .icon#shareButtonTooltip {
+        display: block;
+        position: absolute;
+        top: 84px;
+        left: 110px;
+        background-color: var(--title-color);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 0.5rem;
+        z-index: 2;
+    }
+
+    .icons-media {
+        padding: 0;
+    }
+
+    .share h2 {
+        margin:0;
+        padding-left: 0.8rem;
+    }
+}
+
+
+aún tengo el mismo problema, modifiquemos el js para que cuando se le de clic en vista movil solamente oculte author y muestre .share, hasta ahí está bien, luego cuando se de clic de nuevo esta vez en el sharebutton se oculta .share (que eso sí funciona bien) y vuelva a mostrar .author sin hacerle ninguna modificacion porque el avatar y el icon id="shareButton" se vuelven ovalos al perder o su ancho o su alto
