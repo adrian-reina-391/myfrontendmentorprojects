@@ -607,4 +607,3 @@ footer {
 }
 
 
-aún tengo el mismo problema, modifiquemos el js para que cuando se le de clic en vista movil solamente oculte author y muestre .share, hasta ahí está bien, luego cuando se de clic de nuevo esta vez en el sharebutton se oculta .share (que eso sí funciona bien) y vuelva a mostrar .author sin hacerle ninguna modificacion porque el avatar y el icon id="shareButton" se vuelven ovalos al perder o su ancho o su alto
