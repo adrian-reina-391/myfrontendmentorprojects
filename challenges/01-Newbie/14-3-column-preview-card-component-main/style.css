@@ -134,7 +134,7 @@ button {
         margin: 0 auto;
         margin-top: 100px;
         width: 90%;
-        max-width: 1400px;
+        
         min-width: 800px;
     }
 
@@ -142,6 +142,7 @@ button {
         display: flex;
         flex-direction: row;
         margin-bottom: 100px;
+        max-width: 1400px;
     }
 
     .sedan_card {
@@ -154,7 +155,7 @@ button {
 
     .car_card {
         padding: 45px ;
-        min-height: 400px;
-        max-width: 460px;
+        min-height: 380px;
+        max-width: 550px;
     }
 }
