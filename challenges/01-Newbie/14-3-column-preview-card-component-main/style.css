@@ -130,12 +130,20 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Para centrar verticalmente si es necesario */
+    }
+
     main {
         margin: 0 auto;
         margin-top: 100px;
-        width: 90%;
-        
-        min-width: 800px;
+        width: 90%; /* Ajusta el ancho relativo al viewport */
+        max-width: 1400px; /* Limita el ancho máximo */
+        justify-self: center;
     }
 
     .card-container {
@@ -143,6 +151,8 @@ button {
         flex-direction: row;
         margin-bottom: 100px;
         max-width: 1400px;
+        justify-content: center;
+        
     }
 
     .sedan_card {
@@ -154,8 +164,56 @@ button {
     }
 
     .car_card {
-        padding: 45px ;
-        min-height: 380px;
-        max-width: 550px;
+        padding: 45px;
+        min-height: 450px;
+        flex: 1; /* Hace que las tarjetas ocupen el mismo espacio */
+        max-width: 350px;
+        max-height: 500px;                               
+    }
+
+    button {
+        background-color: var(--body_BG_color);
+        display: block;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        font-family: "Lexend Deca", serif;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        border: none;
+        margin-top: 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Agrega una transición suave */
+    }
+
+    button:focus,
+    button:active {
+    outline: 2px solid var(--body_BG_color); /* Outline del color del fondo del body */
+    background-color: transparent; /* Fondo transparente */
+    color: var(--body_BG_color); /* Texto del color del fondo del body */
+    }
+
+    /* Asegurar que los botones mantengan el estilo dentro de sus tarjetas */
+    .sedan_card button:focus,
+    .sedan_card button:active {
+    background-color: var(--sedan_BG_color); /* Fondo del color de la tarjeta */
+    }
+
+    .suv_card button:focus,
+    .suv_card button:active {
+    background-color: var(--suv_BG_color); /* Fondo del color de la tarjeta */
+    }
+
+    .luxury_card button:focus,
+    .luxury_card button:active {
+    background-color: var(--luxury_BG_color); /* Fondo del color de la tarjeta */
+    }
+
+    .attribution {
+        position: absolute; /* Fija el pie de página al final */
+        bottom: 10px; /* Distancia desde el borde inferior */
+        left: 50%; /* Centra horizontalmente */
+        transform: translateX(-50%); /* Ajusta el centro */
+        width: 100%; /* Ocupa todo el ancho */
     }
 }
