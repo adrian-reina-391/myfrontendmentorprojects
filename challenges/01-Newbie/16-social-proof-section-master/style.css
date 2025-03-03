@@ -1,0 +1,291 @@
+Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 400, 500, 700;
+
+* {
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --bg__color:hsl(300, 24%, 96%);
+    --review__bg__color: hsl(303, 10%, 53%);
+    --card__bg_color:hsl(300, 43%, 22%);
+    --verification__color: hsl(333, 80%, 67%);
+    --cards__texts:hsl(0, 0%, 100%);
+}
+
+body {
+    /* background-color: var(--bg__color); */
+    background-image: url(images/bg-pattern-bottom-desktop.svg),url(images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top right bottom;
+    min-height: 100vh;
+    font-family: "League Spartan", serif;
+    position: relative;
+    font-size: 15px;
+}
+
+
+
+/* .league-spartan-<uniquifier> {
+  font-family: "League Spartan", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}  */
+
+
+.all {
+    padding: 2rem 1.5rem;
+    min-width: 350px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main_title {
+    text-align: center;
+    color: var(--card__bg_color);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.main_text {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: var(--review__bg__color);
+}
+
+.first, .second, .third {
+    background-color: hsla(302, 10%, 53%, 0.137);
+    font-weight: 700;
+    color: var(--card__bg_color);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding:0.5rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: -1rem;
+}
+
+.stars img{
+    padding: 0.5rem 0.2rem 0;
+}
+
+.cards_area {
+    margin-top: 3rem;
+    min-width: 350px;
+
+}
+.card {
+    border-radius: 10px;
+    background-color: var(--card__bg_color);
+    margin: 1rem 0;
+    padding: 2rem;
+    max-width: 312px;
+}
+
+.card_top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 30px);
+    grid-template-areas:
+    "image name   name  name ."
+    "image verified  verified verified .";
+    
+}
+
+
+.image {
+    grid-area: image;
+    align-self: center;
+}
+
+.avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.name {
+    grid-area: name;
+    margin-left: 20px;
+    color: var(--cards__texts);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.verified {
+    grid-area: verified;
+    margin-left: 20px;
+    color: var(--verification__color);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+}
+
+.card_text {
+    color: var(--cards__texts);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 600px) {
+    .cards_area {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+      gap: 1rem; /* Espacio entre cards */
+      justify-content: center; /* Centra el grid */
+    }
+  
+    .card {
+      max-width: 75%; /* Permite que las cards ocupen el ancho del contenedor */
+      margin: 0; /* Elimina márgenes anteriores */
+    }
+  }
+  
+  
+  @media screen and (min-width: 1000px) {
+    .all {
+        display: grid;
+        
+    }
+
+    .cards_area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        max-width: 100%; 
+        margin: 0; 
+        }
+
+    .all {  
+            max-width: 1366px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 8px;
+            padding: 4rem;
+        }
+            
+        
+    .main_title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 90%;
+        text-align: start;
+    }
+
+    .main_title h1{
+        font-size: 3rem;
+    }
+
+    .main_text {
+        text-align: start;
+    }
+
+    .reviews {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        transform: translateY(3.5rem);
+
+    }
+
+    .first, .second, .third {
+        display: flex;
+        align-items: center; 
+        justify-content: flex-start;
+        padding: 1rem 2rem; 
+        height: 2rem; /* Altura fija para alinear todo */
+        width: 84%;
+        margin-right: 1rem;
+        transform: translateX(-1.8rem);
+    }
+    
+    .stars {
+        display: flex; /* Convierte a flex container */
+        align-items: center; /* Centra verticalmente las estrellas */
+        margin-left: 0; /* Reset del margen anterior */
+        gap: 0.3rem; /* Espacio entre estrellas */
+    }
+    
+    .stars img {
+        margin: 0; /* Elimina márgenes anteriores */
+        padding: 0; 
+        display: block; /* Elimina espacio fantasma debajo de imágenes */
+    }
+    
+
+    .review_text {
+        margin-left: 2rem;
+    }
+
+    .second {
+        margin-left: 3rem;
+    }
+
+    .third {
+        margin-left: 6rem;
+    }
+
+    .cards_area {
+            grid-column: span 2 / span 2;
+        }
+    
+    .card {
+        padding-bottom: 0;
+    }
+    .card2 {
+        transform: translateY(1rem);
+    }
+        
+    .card3 {
+        transform: translateY(2rem);
+    }
+    } 
+
+
+    @media screen and (min-width: 1200px) {
+        .main_title h1{
+            font-size: 3.2rem;
+        }
+    
+        .main_text {
+            font-size: 1.8rem;
+        }
+    
+        .reviews {
+            transform: translateY(4rem);
+        }
+
+        .card {
+            height: fit-content;
+            padding-bottom: 2rem;
+        }
+    }
+
