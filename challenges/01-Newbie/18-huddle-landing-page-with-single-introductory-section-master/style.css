@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Capa de fondo */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: hsl(257, 40%, 49%) url('./images/bg-mobile.svg') no-repeat top center;
+    background-size: contain;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    margin-bottom: 3rem;
+}
+
+.logo_container {
+    width: 130px;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    width: 100%;
+}
+
+.mockup img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.btn {
+    background: white;
+    color: hsl(257, 40%, 49%);
+    padding: 0.9rem 5rem;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: hsl(300, 69%, 71%);
+    color: white;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.socials div {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.socials div:hover {
+    border-color: hsl(300, 69%, 71%);
+}
+
+.socials svg {
+    width: 18px;
+    height: 18px;
+    fill: white !important;
+}
+
+.socials div:hover svg {
+    fill: hsl(300, 69%, 71%) !important;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .background-overlay {
+        background-image: url('./images/bg-desktop.svg');
+        background-size: cover;
+    }
+
+    .container {
+        padding: 3rem 5%;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 2rem;
+    }
+
+    header {
+        grid-row: 1 / 4;
+        margin-bottom: 0;
+    }
+
+    .logo_container {
+        width: 200px;
+        margin-bottom: 4rem;
+    }
+
+    main {
+        text-align: left;
+        align-self: center;
+        padding-top: 6rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .text {
+        font-size: 1.05rem;
+        max-width: 500px;
+    }
+
+    footer {
+        
+        grid-column: 2;
+        margin-top: 0;
+    }
+
+    .socials {
+        margin-top: 5rem;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 4rem 8%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 1.2rem 6rem;
+        font-size: 1.1rem;
+    }
+}
+
+
+
+@media screen and (min-width: 2000px) {
+    :root {
+        font-size: 1.2vw; /* Escalado responsivo de la tipografía */
+    }
+
+    .container {
+        max-width: 2000px; /* Límite máximo para pantallas gigantes */
+        transform: scale(1.2); /* Escalado general opcional */
+        transform-origin: center;
+        padding: 4rem 10%;
+    }
+
+    .mockup img {
+        max-width: 80%; /* Control del tamaño de la imagen */
+    }
+
+    /* Ajuste específico para textos muy grandes */
+    h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+        max-width: 800px;
+    }
+
+    .btn {
+        padding: 1.5rem 8rem;
+        font-size: 1.3rem;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    :root {
+        font-size: 1.1vw;
+    }
+    
+    .container {
+        max-width: 2500px;
+        transform: scale(1.5);
+        padding: 5rem 15%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
