@@ -137,6 +137,11 @@ footer {
     opacity: 0.8;
 }
 
+.attribution a {
+    color: #eee;
+    font-weight: 600;
+}
+
 /* Media Queries */
 @media screen and (min-width: 768px) {
     .background-overlay {
