@@ -1,0 +1,359 @@
+/* Root Variables */
+:root {
+    --main-bg-color: hsl(0, 36%, 70%);
+    --main-buttons-color: hsl(0, 93%, 68%);
+    --main-color: hsl(0, 6%, 24%);
+    --text-color: hsl(0, 6%, 24%);
+  }
+  
+  /* Reset Box Model */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hide Label Visually but Keep It Accessible */
+  .hidden-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  /* Grid Layout */
+  .all {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 0.5rem;
+    font-size: 16px;
+    background-color: hsl(0, 0%, 100%);
+    min-height: 100vh;
+  }
+  
+  .logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  picture {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .card {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  footer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    height: 3.6rem;
+    padding: 1.6rem 2rem;
+    display: flex;
+    align-self: center;
+  }
+  
+  .logo img {
+    width: 7.5rem;
+    height: max-content;
+  }
+  
+  /* Picture Styling */
+  picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  picture img {
+    width: 100%;
+    height: auto;
+    max-width: 767px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  /* Card Styling */
+  .card {
+    padding: 1.4rem 2rem;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  h1 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 5px;
+  }
+  
+  .light_font {
+    font-weight: 300;
+    color: var(--main-bg-color);
+  }
+  
+  .text {
+    color: var(--main-bg-color);
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form Styling */
+  .form_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  .input_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  #email {
+    padding: 1rem 1.2rem;
+    border-radius: 30px;
+    border: solid hsla(0, 93%, 68%, 0.507) 0.5px;
+    width: 100%;
+    font-size: 0.8rem;
+    font-family: inherit;
+    padding-right: 70px; /* Space for the submit button (60px + some margin) */
+  }
+  
+  .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 75px; /* Ajusta la posición a la izquierda */
+    transform: translateY(-50%);
+    width: 25px; /* Tamaño del ícono */
+    height: 25px;
+    display: none;/* hidden by default */
+    z-index: 10;
+  }
+
+  .submit-button {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 65px; /* Total width of the button */
+    height: 50px; /* Total height of the button */
+    border-radius: 30px; /* Same that the input*/
+    background-color: hsla(0, 93%, 68%, 0.507); /* Semi-rosy background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the SVG inside the container */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-svg {
+    width: 30px; /* Size of the SVG */
+    height: 30px;
+  }
+  
+  .submit-svg polygon {
+    fill: white; /* Fill the SVG shape with white */
+  }
+
+  /* Hover */
+  
+  .submit-button:hover {
+    background-color: white; /* Semi-rosy background color */
+    box-shadow: 0 2px 5px hsla(0, 93%, 68%, 0.507); /* Box shadow for depth */
+  }
+
+  .submit-button:hover .submit-svg polygon {
+    fill: hsla(0, 93%, 68%, 0.507); /* Cambiar color del SVG */
+  }
+
+/* Default style for the placeholder */
+#email::placeholder {
+  color: hsla(0, 93%, 68%, 0.507);
+  opacity: 1;
+}
+
+/*  for browsers WebKit (Chrome, Safari, Edge) */
+#email::-webkit-input-placeholder {
+  color: hsla(0, 93%, 68%, 0.507);
+  opacity: 1;
+}
+
+/* for Firefox */
+#email::-moz-placeholder {
+  color: hsla(0, 93%, 68%, 0.507);
+  opacity: 1;
+}
+
+
+.error-message {
+  color: hsl(0, 93%, 68%);
+  font-size: 0.8rem;
+  margin-top: .5rem;
+  margin-left: 1.2rem;
+  text-align: left;
+  display: none; /*hidden by default */
+}
+
+
+.attribution {  
+    font-size: 11px;  
+    text-align: center;
+    margin-top: 2rem;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .attribution a {  
+    color: hsl(0, 93%, 68%);  
+  }
+
+
+
+   /* Media Queries */
+
+  @media screen and (min-width: 768px) {
+   /* Grid Layouts for desktops an tablets  */
+    
+
+   .all {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 0.5rem;
+    font-size: 16px;
+    background-color: hsl(0, 0%, 100%);
+    min-height: 600px;
+    max-width: 1440px;
+  }
+  
+  .logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  picture {
+    grid-column: 2/ 3;
+    grid-row: 1 / 5;
+  }
+  
+  .card {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+  }
+  
+  footer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    height: 2.6rem;
+    padding: 2.6rem 3.5rem;
+    display: flex;
+    align-self: center;
+  }
+  
+  .logo img {
+    width: 7.5rem;
+    height: max-content;
+  }
+
+  picture img{
+    max-width: 500px;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+  /*Card Styling */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 3rem 3.5rem;
+    width: 100%;
+    text-align: start;
+    
+  }
+
+}  
+
+
+@media screen and (min-width: 1024px) {
+
+  body {
+    margin: 0 auto;
+    align-items: center;
+    padding: 0;
+  }
+
+  .all {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  picture img{
+    max-width: none;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+
+  .card {
+    padding: 1.5rem 7rem;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .logo {
+    padding: 2.6rem 7rem;
+    padding-bottom: 0;
+  }
+
+  
+  .logo img {
+    width: 12.5rem;
+    height: max-content;
+  }
+
+  .card h1 {
+    font-size: 5rem;
+    text-align: left;
+  }
+
+  .text {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .form_container {
+    width: 100%;
+  }
+}
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="all">
+    <!-- Where the web title goes -->
+    <section class="logo">
+      <img src="./images/logo.svg" alt="company logo">
+    </section>
+    <!-- Where the main picture goes -->
+    <picture>
+      <source media="(max-width: 767px)" srcset="./images/hero-mobile.jpg">
+      <source media="(min-width: 768px)" srcset="./images/hero-desktop.jpg">
+      <img src="./images/hero-mobile.jpg" alt="female model">
+    </picture>
+    <!-- Where the web info goes -->
+    <div class="card">
+      <div class="promo">
+        <h1><span class="light_font">We're</span> coming soon</h1>
+      </div>
+      <div class="text">
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      </div>
+      <!-- Where the mail form goes -->
+      <div class="form_container">
+        <form id="emailForm" action="send_email.php" method="POST">
+          <label class="hidden-label" for="email">Email Address</label>
+          <div class="input_container">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <div id="error-icon" class="error-icon"><img src="./images/icon-error.svg" alt=""></div>
+            <div class="submit-button"   id="submit-icon" role="button">
+              <svg class="submit-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256"/>
+              </svg>
+            </div>
+          </div>
+          <p id="error-message" class="error-message">Please provide a valid email</p>
+        </form>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://www.frontendmentor.io/profile/adrian-reina-391">Adrian Reina</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
