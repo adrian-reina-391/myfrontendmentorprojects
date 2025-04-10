@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/bg-intro-mobile.png);
+    background-position: center;
+    background-color: hsl(0, 100%, 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    
+}
+
+.all {
+    padding: 2rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    padding-top: 3rem ;
+    margin-bottom: 1rem;
+}
+h1 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+.main-button {
+    background-color: hsl(249, 65%, 42%);
+    border: none;
+    padding: 1rem 3.5rem;
+    color: white;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: .9rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.452);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: hsl(248, 32%, 49%);
+}
+
+.then {
+    font-weight: 300;
+    
+}
+
+form {
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.452);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 450px;
+}
+
+form input {
+    display: block;
+    margin: 0 auto;
+    width: 98%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: .8rem;
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+form button {
+    background-color: hsl(154, 59%, 51%);
+    padding: 1rem 2rem;
+    width: 98%;
+    margin: 10px 0;
+    border: solid .1px transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: .8rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    background-color: hsl(248, 32%, 49%);
+}
+
+form p {
+    font-size: .65rem;
+    padding: .2rem 1rem;
+    color: hsl(246, 25%, 77%);
+}
+
+form a {
+    color:hsl(0, 100%, 74%) ;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.attribution {
+    margin-top: 2rem;
+    
+}
+
+    
+
+@media screen and (min-width: 950px) {
+    body {
+        background-image: url(./images/bg-intro-desktop.png);
+        background-position: center;
+        background-color: hsl(0, 100%, 74%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+    }
+
+    .all {
+        display: grid;
+        max-width: 1440px;
+        padding: 4rem;
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 2rem; /* Espacio entre las columnas */
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        max-height: 1000px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente el contenido dentro de main */
+        margin-left: 1rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        text-align: left;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .s2nd_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente los elementos dentro de .s2nd_area */
+    }
+
+    footer {
+        position: absolute; /* Posiciona el footer en la parte inferior */
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%); /* Centra horizontalmente el footer */
+    }
+}
+
+
+
+/* Estilos para el contenedor del input */
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el ícono de error */
+.error-icon {
+    position: absolute;
+    right: 1rem;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+  
+
+/* Estilos para el mensaje de error */
+.error-message {
+    color: hsl(0, 100%, 74%);
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: right;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+/* Estilos para el input con error */
+input.error {
+    border: 2px solid hsl(0, 100%, 74%);
+}
+
+/* Asegurarse de que el input group tenga espacio suficiente para el mensaje de error */
+.input-group {
+    margin-bottom: 1.5rem;
+}
