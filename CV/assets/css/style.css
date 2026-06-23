@@ -1,49 +1,50 @@
 /* Tema Oscuro (Predeterminado) */
 @media (prefers-color-scheme: dark) {
     :root {
-      --theme-color: rgba(2, 5, 22, 0.747);
-      --primary-color: #42A2E0;
-      --barback-color: rgba(224, 216, 216, 0.774);
-      --text-color: rgba(255, 255, 255, 0.884);
+        --theme-color: rgba(2, 5, 22, 0.747);
+        --primary-color: #42A2E0;
+        --barback-color: rgba(224, 216, 216, 0.774);
+        --text-color: rgba(255, 255, 255, 0.884);
     }
-  }
-  
-  /* Tema Claro */
-  @media (prefers-color-scheme: light) {
+}
+
+/* Tema Claro */
+@media (prefers-color-scheme: light) {
     :root {
-      --theme-color: white;
-      --primary-color: #42A2E0;
-      --barback-color: rgba(180, 166, 166, 0.774);
-      --text-color: black;
+        --theme-color: white;
+        --primary-color: #42A2E0;
+        --barback-color: rgba(180, 166, 166, 0.774);
+        --text-color: black;
     }
-  }
+}
 
 
-*{
+* {
     margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
 
-body{
+body {
     scroll-behavior: smooth;
     color: var(--text-color);
     background-color: var(--theme-color);
 }
-.all{
+
+.all {
     width: 100%;
     padding: 1.5rem;
     position: relative;
 
 }
 
-.img-container{
+.img-container {
     width: 100%;
     margin: 0 auto;
     max-height: 250px;
 }
 
-.image{
+.image {
     width: 98%;
     border: solid 3px #42A2E0;
     max-width: 185px;
@@ -52,32 +53,37 @@ body{
     justify-content: center;
 }
 
-h1{
+h1 {
     text-align: center;
     color: var(--primary-color);
 }
 
 
 
-.gps, .address{
+.gps,
+.address {
     display: inline-block;
     margin: 0.3rem;
 }
 
-.email, .amail {
+.email,
+.amail {
     display: inline-block;
     margin: 0.3rem;
 }
-.gps, .email{
+
+.gps,
+.email {
     color: #42A2E0;
 }
 
-.location, .mail{
+.location,
+.mail {
     margin: 0.7rem 0;
 }
 
-header{
-    border-bottom: 5px solid #42A2E0; ;
+header {
+    border-bottom: 5px solid #42A2E0;
     margin-bottom: 1.2rem;
 }
 
@@ -99,28 +105,28 @@ header{
     position: fixed;
     top: 70px;
     right: 25px;
-    
-   }
 
-   #downloadPdfBtn span:before{
+}
+
+#downloadPdfBtn span:before {
     content: 'PDF';
     color: var(--text-color);
- }
+}
 
 /*Here starts the abilities section */
 
-h2{
+h2 {
     line-height: 2.6rem;
     border-bottom: solid 2px #42A2E0;
 }
 
-h3{
+h3 {
     line-height: 1.4rem;
     margin-bottom: 0.4rem;
     margin-top: 0.2rem;
 }
 
-.date{
+.date {
     color: #42A2E0;
     font-weight: 300;
     font-style: italic;
@@ -132,24 +138,27 @@ h3{
     text-decoration: none;
 }
 
-.mailto:hover{
+.mailto:hover {
     color: var(--theme-color);
     background-color: var(--primary-color);
 }
 
-.summary-list, .paragraph, .list {
+.summary-list,
+.paragraph,
+.list {
     line-height: 1.5;
 }
-.table{
+
+.table {
     margin: 2rem 0;
     max-width: 340px;
 }
 
-td{
+td {
     line-height: 2.4rem;
 }
 
-.bar{
+.bar {
     width: 100%;
     height: 8px;
     background-color: var(--barback-color);
@@ -157,68 +166,112 @@ td{
     margin-bottom: 1.5rem;
 }
 
-.full-bar{
+.full-bar {
     background-color: #42A2E0;
     height: 100%;
     margin-left: 0;
 }
 
-.os{
+/* Language Visibility */
+body.lang-en .lang-es {
+    display: none !important;
+}
+
+body.lang-es .lang-en {
+    display: none !important;
+}
+
+/* Language Toggle Button */
+.lang-toggle-btn {
+    display: inline-block;
+    border-radius: 7px;
+    border: none;
+    background: #0a92e0;
+    color: white;
+    font-family: inherit;
+    text-align: center;
+    font-size: 13px;
+    box-shadow: 0px 10px 20px -11px #1875FF;
+    width: 3em;
+    padding: 1em;
+    transition: all 0.4s;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.lang-toggle-btn:hover {
+    background: #0d4b9e;
+}
+
+@media screen and (min-width: 1200px) {
+    .lang-toggle-btn {
+        top: 60px;
+        right: 200px;
+    }
+}
+
+.os {
     width: 90%;
 }
 
-.frontend{
+.frontend {
     width: 20%;
 }
 
-.office{
-    width:80% ;
+.office {
+    width: 80%;
 }
 
-.networking{
+.networking {
     width: 60%;
 }
 
-.solving{
+.solving {
     width: 100%;
 }
 
-.customer{
+.customer {
     width: 100%;
 }
 
-.teamwork{
+.teamwork {
     width: 100%;
 }
 
-.english{
+.english {
     width: 70%;
 }
 
-.languages{
+.languages {
     padding-bottom: 4rem;
 }
 
-
+/* Projects Section */
+.projects h3 {
+    margin-top: 0.8rem;
+}
 
 @media screen and (min-width: 950px) {
-    *{
-        margin: 0 a;
+    * {
+        margin: 0 auto;
         box-sizing: border-box;
         font-family: 'Noto Sans', sans-serif;
     }
 
-    .all{
+    .all {
         width: 100%;
         padding: 3rem;
         position: relative;
         display: grid;
         grid-template-columns: 2.5fr 1fr;
-        grid-template-rows:  300px 1fr 2fr 0.5fr;
+        grid-template-rows: 300px 1fr 2fr 0.5fr;
         grid-auto-rows: min-content;
     }
-    
-    header{
+
+    header {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -227,47 +280,47 @@ td{
         grid-row: 1/2;
         width: 100%;
         display: grid;
-        grid-template-columns:  320px 1fr;
-        grid-template-rows:  1fr;
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: 1fr;
         height: 280px;
         padding: 0;
 
     }
-    .img-container{
+
+    .img-container {
         width: 320px;
         max-width: 320px;
-        margin: 0  0 0 0;
-        /* margin-right: 4rem; */
-        /* border: solid 3px rgb(36, 35, 35); */
+        margin: 0 0 0 0;
         grid-column: 1/2;
         grid-row: 1/2;
         height: 250px;
         align-self: flex-start;
-}
+    }
 
-    .image{
+    .image {
         width: 98%;
-        /* border: solid 3px pink; */
         border: solid 3px #42A2E0;
         max-width: 320px;
-        
+
     }
-    .top-text{
+
+    .top-text {
         width: 100%;
         min-width: 500px;
         max-height: 250px;
         grid-column: 2/3;
         grid-row: 1/2;
     }
-    .top-text{
+
+    .top-text {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows:  120px 1fr 1fr;
+        grid-template-rows: 120px 1fr 1fr;
         max-height: 250px;
         font-size: 120%;
     }
 
-    h1{
+    h1 {
         text-align: left;
         font-size: 3rem;
         margin: 1.5rem 0 0 0;
@@ -275,62 +328,70 @@ td{
         grid-row: 1/2;
     }
 
-    h2{
+    h2 {
         padding: 1rem 0;
     }
 
-    h3{
+    h3 {
         padding: 1rem 0;
     }
 
-    section{
+    section {
         margin-left: 0;
         margin-top: 0;
         width: 100%;
-        /* font-size: 120%; */
     }
-    .location{
+
+    .location {
         grid-column: 1/2;
         grid-row: 2/3;
         height: 20px;
         margin: 0;
     }
 
-    .mail{
+    .mail {
         grid-column: 1/2;
         grid-row: 3/4;
         height: 20px;
         margin: 0;
     }
-    
-    section{
+
+    section {
         grid-auto-columns: min-content;
         align-items: center;
         width: 100%;
         height: 100%;
     }
-    .abilities{
+
+    .abilities {
         grid-column: 1/2;
         grid-row: 2/3;
-        
+
     }
 
-    .history{
+    .history {
         width: 100%;
         grid-column: 1/2;
         grid-row: 3/4;
     }
 
-    .education{
+    .education {
         width: 100%;
-        grid-column: 1/-1;
+        grid-column: 1/2;
         grid-row: 4/5;
         margin: 0;
     }
 
-    aside{
+    .projects {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 5/6;
+        margin: 0;
+    }
+
+    aside {
         grid-column: 2/3;
-        grid-row: 2/4;
+        grid-row: 2/6;
         margin-left: 2rem;
     }
 
@@ -342,7 +403,7 @@ td{
 @media screen and (min-width: 1200px) {
     .all {
         padding: 6rem;
-        
+
     }
 
     li {
@@ -371,22 +432,22 @@ td{
         position: fixed;
         top: 60px;
         right: 20px;
-        
-       }
-       
-       #downloadPdfBtn span {
+
+    }
+
+    #downloadPdfBtn span {
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.4s;
-       }
-       
-       #downloadPdfBtn span:before {
+    }
+
+    #downloadPdfBtn span:before {
         content: 'Download CV';
         color: var(--text-color);
     }
-    
-       #downloadPdfBtn span:after {
+
+    #downloadPdfBtn span:after {
         content: 'as PDF';
         position: absolute;
         color: var(--text-color);
@@ -394,26 +455,26 @@ td{
         top: 0;
         right: -20px;
         transition: 0.7s;
-       }
-       
-       #downloadPdfBtn:hover span {
+    }
+
+    #downloadPdfBtn:hover span {
         padding-right: 3.55em;
-       }
-       
-       #downloadPdfBtn:hover span:after {
+    }
+
+    #downloadPdfBtn:hover span:after {
         opacity: 4;
         right: 0;
-       }
-    
+    }
+
 }
 
 /* The switch - the box around the slider */
 .switch {
     font-size: 17px;
     display: inline-block;
-    vertical-align: middle; /* Alinear verticalmente con otros elementos inline */
-    margin-right: 10px; /* Espacio entre el toggle y el elemento anterior */
-    position: relative; /* Añadir posición relativa para ajustes */
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
 }
 
 /* The switch - the box around the slider */
@@ -423,27 +484,27 @@ td{
     display: inline-block;
     width: 3.5em;
     height: 2em;
-    position:absolute;
+    position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
     z-index: 1000;
-    
-    
+
+
     padding: 10px;
     border-radius: 50%;
-    
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+
+/* The slider */
+.slider {
     --background: #28096b;
     position: absolute;
     cursor: pointer;
@@ -454,9 +515,9 @@ td{
     background-color: var(--background);
     transition: .5s;
     border-radius: 30px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 1.4em;
@@ -467,18 +528,18 @@ td{
     box-shadow: inset 8px -4px 0px 0px #fff000;
     background: var(--background);
     transition: .5s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #522ba7;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     transform: translateX(100%);
     box-shadow: inset 15px -4px 0px 15px #fff000;
-  }
+}
 
-.portfolio{
+.portfolio {
     color: var(--text-color);
     text-decoration: none;
     padding: 3px 5px;

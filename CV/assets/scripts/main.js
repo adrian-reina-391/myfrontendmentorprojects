@@ -1,24 +1,41 @@
-/*
-const element = document.body;
-const options = {
-    filename: 'Adrian_Reina_CV.pdf',
-    html2canvas: {
-        scale: 3 // Aumentar la escala
-    },
-    exclude: [
-        '#downloadPdfBtn', // Excluir el botón de descarga del PDF
-        '.switch' // Excluir el switch de modo oscuro
-    ],
-    pagebreak: { mode: 'avoid-all' }, // Evitar división de hojas
-    jsPDF: {
-        format: 'a4', // Establecer el formato del documento PDF
-        orientation: 'portrait' // Establecer la orientación del documento
+// Default to English if not set
+if (!document.body.classList.contains('lang-es')) {
+    document.body.classList.add('lang-en');
+}
+
+const langToggleBtn = document.getElementById('langToggleBtn');
+const downloadBtnLink = document.querySelector('#downloadPdfBtn a');
+
+// Define file paths
+const pdfEnglish = "./assets/files/Adrian Reina's Resume.pdf";
+const pdfSpanish = "./assets/files/Curriculum_de_Adrian_Reina.pdf";
+
+function updateDownloadLink() {
+    if (downloadBtnLink) {
+        if (document.body.classList.contains('lang-es')) {
+            downloadBtnLink.href = pdfSpanish;
+            downloadBtnLink.download = "Curriculum_de_Adrian_Reina.pdf"; // Optional: force download name
+        } else {
+            downloadBtnLink.href = pdfEnglish;
+            downloadBtnLink.download = "Adrian_Reina_Resume.pdf";
+        }
     }
-};
+}
 
-const downloadBtn = document.getElementById('downloadPdfBtn');
+// Initialize link
+updateDownloadLink();
 
-downloadBtn.addEventListener('click', function() {
-    html2pdf().from(element).set(options).save();
-});
-*/
+if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function () {
+        if (document.body.classList.contains('lang-en')) {
+            document.body.classList.replace('lang-en', 'lang-es');
+            langToggleBtn.textContent = 'EN';
+        } else {
+            document.body.classList.replace('lang-es', 'lang-en');
+            langToggleBtn.textContent = 'ES';
+        }
+        updateDownloadLink();
+    });
+}
+
+
